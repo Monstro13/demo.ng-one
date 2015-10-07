@@ -29,7 +29,6 @@ gulp.task('build-webpack', function () {
 
 gulp.task('watch', function () {
 	gulp.watch(['./app/*.html'], ['html']);
-	gulp.watch(['./app/**/(*.js|!(*.core.js))'], ['build-webpack']);
 });
 
 gulp.task('default', ['build-webpack', 'connect', 'watch']);
