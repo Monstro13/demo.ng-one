@@ -4,7 +4,21 @@ md-card {
 	padding-left: 60px;
 	padding-right: 60px;
 }
-
 md-3-line h3 {
 	font-weight: 500;
+}
+search-header {
+	background: #8A97E0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 0px 7px 1px #8A97E0;
+}
+.md-toolbar-tools h2 {
+	margin-left: 12px;
+}
+
+md-input-container {
+	margin-left: 25px;
+    margin-bottom: -5px;
+    font-size: 17px;
 }

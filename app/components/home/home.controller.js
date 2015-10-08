@@ -1,7 +1,8 @@
-export default class HomeController {
+class HomeController {
 	constructor(Phone) {
 		this.Phone = Phone;
 		this.phones = [];
+		this.pattern = "";
 
 		this.init();
 	}
@@ -14,3 +15,5 @@ export default class HomeController {
 }
 
 HomeController.$inject = ['Phone'];
+
+export default HomeController;
