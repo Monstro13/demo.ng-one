@@ -1,5 +1,3 @@
-import angular from 'angular';
-
 class Phone {
 	constructor($http, $q) {
         this.$http = $http;
@@ -29,6 +27,4 @@ class Phone {
 
 Phone.$inject = ['$http', '$q'];
 
-export default angular.module('services.phone', [])
-	.service('Phone', Phone)
-	.name;
+export default Phone;

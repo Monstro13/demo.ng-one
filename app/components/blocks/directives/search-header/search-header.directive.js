@@ -1,6 +1,4 @@
-import angular from 'angular';
-
-function searchHeader() {
+export default function searchHeader() {
 	return {
 		restrict: 'AE',
 		scope: {
@@ -9,7 +7,3 @@ function searchHeader() {
 		template: require('./search-header.template.html'),
 	}
 }
-
-export default angular.module('directives.searchHeader', [])
-	.directive('searchHeader', searchHeader)
-	.name;
