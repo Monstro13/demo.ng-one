@@ -1,16 +1,17 @@
 <md-content>
 	<md-card>
 		<search-header pattern="home.pattern"></search-header>
-		<md-list>
+		<md-list ng-if="!home.subState">
 			<md-subheader class="md-title">Phone cat demo project</md-subheader>
 			<md-list-item class="md-3-line" ng-repeat="phone in home.phones | filter:home.pattern">
 				<img ng-src="{{phone.imageUrl}}" class="md-avatar" alt="{{phone.id}}" />
 				<div class="md-list-item-text" layout="column">
-					<h3>{{ phone.id }}</h3>
+					<h3><a ui-sref="home.phone({phoneId: phone.id})">{{ phone.id }}</a></h3>
 					<p>{{ phone.snippet }}</p>
 				</div>
 				<md-divider></md-divider>
 			</md-list-item>
 		</md-list>
 	</md-card>
+	<md-card ui-view ng-if="home.subState"></md-card>
 </md-content>

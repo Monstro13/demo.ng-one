@@ -17,7 +17,13 @@ class Phone {
 	};
 
 	byId(id) {
+		let deferred = this.$q.defer();
 
+		this.$http.get('./phones/' + id + '.json').then((response) => {
+			deferred.resolve(response.data);
+		});
+
+		return deferred.promise;
 	};
 }
 

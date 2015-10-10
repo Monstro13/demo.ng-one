@@ -1,19 +1,22 @@
 class HomeController {
-	constructor(Phone) {
-		this.Phone = Phone;
+	constructor($scope, Phone, $state) {
 		this.phones = [];
 		this.pattern = "";
 
-		this.init();
+		this.activate($scope, Phone, $state);
 	}
 
-	init() {
-		this.Phone.all().then((phones) => {
+	activate($scope, Phone, $state) {
+		Phone.all().then((phones) => {
 			this.phones = phones;
+		});
+
+		$scope.$on('$stateChangeSuccess', () => {
+			this.subState = ($state && $state.params && $state.params.phoneId);
 		});
 	};
 }
 
-HomeController.$inject = ['Phone'];
+HomeController.$inject = ['$scope', 'Phone', '$state'];
 
 export default HomeController;

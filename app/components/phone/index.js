@@ -5,10 +5,10 @@ import services from './../blocks/services';
 import directives from './../blocks/directives';
 import filters from './../blocks/filters';
 
-import routing from './home.routes';
-import HomeController from './home.controller';
+import routing from './phone.routes';
+import PhoneController from './phone.controller';
 
-export default angular.module('components.home', [uirouter, services, directives, filters])
+export default angular.module('components.phone', [uirouter, services, directives, filters])
 	.config(routing)
-	.controller('HomeController', HomeController)
+	.controller('PhoneController', PhoneController)
 	.name;
